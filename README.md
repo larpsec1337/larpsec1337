@@ -25,7 +25,23 @@
 
 <img src="./assets/chaos.gif" width="100%" alt="A deliberately overloaded animated terminal/wiki/glitch collage generated from code in this repository." />
 
-<img src="./assets/ticker.gif" width="100%" alt="Animated emergency broadcast ticker." />
+<img src="./assets/ticker.gif" width="100%" alt="Animated emergency broadcast ticker." />\n\n<img src="./assets/portal.gif" width="100%" alt="Recursive portal animation" />
+
+<table>
+<tr>
+<td width="50%"><img src="./assets/crashswarm.gif" width="100%" alt="Animated fake operating system crash swarm" /></td>
+<td width="50%"><img src="./assets/wikimeltdown.gif" width="100%" alt="Animated corrupted wiki panel" /></td>
+</tr>
+<tr>
+<td width="50%"><img src="./assets/surveillance.gif" width="100%" alt="Animated surveillance wall" /></td>
+<td width="50%"><img src="./assets/conspiracy.gif" width="100%" alt="Animated conspiracy evidence board" /></td>
+</tr>
+</table>
+
+<img src="./assets/terminalrain.gif" width="100%" alt="Animated terminal glyph rain" />
+
+<img src="./assets/oscilloscope.gif" width="100%" alt="Animated oscilloscope semantic noise" />
+
 
 </div>
 
@@ -411,7 +427,7 @@ The following statements supersede it:
 
 ### `YOU HAVE REACHED THE BOTTOM OF THE PROFILE.`
 
-### `THIS CLAIM IS FALSE.`
+### `THIS CLAIM IS FALSE.`\n\n<img src="./assets/footer.gif" width="100%" alt="Animated false ending and footer corruption" />
 
 ```txt
                               ▼
