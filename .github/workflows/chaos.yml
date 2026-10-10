@@ -3,6 +3,8 @@ name: regenerate profile insanity
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - "assets/**"
   schedule:
     - cron: "13 */6 * * *"
   workflow_dispatch:
@@ -34,7 +36,7 @@ jobs:
         run: |
           git config user.name "profile-insanity-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/chaos.gif assets/ticker.gif
+          git add assets/*.gif
           git diff --cached --quiet && exit 0
           git commit -m "chore: regenerate reality distortion field"
           git push
