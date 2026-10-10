@@ -1,0 +1,40 @@
+name: regenerate profile insanity
+
+on:
+  push:
+    branches: [main, master]
+  schedule:
+    - cron: "13 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: install renderer
+        run: pip install -r requirements.txt
+
+      - name: render animated profile assets
+        env:
+          PROFILE_USER: Larpsec1337
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/generate_chaos.py
+
+      - name: commit regenerated assets
+        run: |
+          git config user.name "profile-insanity-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/chaos.gif assets/ticker.gif
+          git diff --cached --quiet && exit 0
+          git commit -m "chore: regenerate reality distortion field"
+          git push
